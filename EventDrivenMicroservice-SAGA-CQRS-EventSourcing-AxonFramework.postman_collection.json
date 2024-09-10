@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "1824818b-a99a-4074-9841-0b3ee30a33fd",
+		"name": "EventDrivenMicroservice-SAGA-CQRS-EventSourcing-AxonFramework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27641596"
+	},
+	"item": [
+		{
+			"name": "User-Service",
+			"item": [
+				{
+					"name": "getAllUsersQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/userservice/getAllUsers"
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByIdQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/userservice/getUserById/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product-Service",
+			"item": [
+				{
+					"name": "getAllProductsQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/productservice/getAllProducts"
+					},
+					"response": []
+				},
+				{
+					"name": "getProductByIdQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8082/productservice/getProductById/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order-Service",
+			"item": [
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : 2,\r\n    \"productName\" : \"Shirt\",\r\n    \"quantity\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/orderservice/createOrder"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
